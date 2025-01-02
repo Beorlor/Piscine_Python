@@ -15,7 +15,7 @@ def ft_tqdm(iterable):
     - Rend chaque élément de iterable
     """
     length = len(iterable)  # Il faut que iterable soit un objet "sized", ex: range
-    start_time = time.time()
+    start_time = time.time() # !!!! a utiliser pour avoir une version plus proche de lorginal
 
     for i, elem in enumerate(iterable):
         # Calcul pourcentage
@@ -30,7 +30,7 @@ def ft_tqdm(iterable):
         )
         sys.stdout.flush()
 
-        yield elem
+        yield elem # super important, permet davancer literateur
 
     # A la fin, on force la barre à 100%
     sys.stdout.write(
