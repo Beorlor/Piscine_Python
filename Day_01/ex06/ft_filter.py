@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+#Verif pour correspondre a filter.__doc__
+
 """
 ft_filter.py
 Recode de la fonction filter, sans utiliser la fonction intégrée filter.
