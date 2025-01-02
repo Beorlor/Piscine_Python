@@ -187,10 +187,11 @@ This README is designed to explain the Python concepts encountered in each exerc
 
 docstring and flake8
 
-generator and iterator (yield)
+generator and iterator (yield), create a package, __
 
 ex05 how __main__ works
 ex06 what filter does. what is a generator and list comprehension et lambda
 ex07 join et rstrip
 ex08 '\r' and sys.stdout.write doesnt have '\n' compare to print, iterateur et yield
+ex09 how to create a package (faire ma license et verif toml)
 
