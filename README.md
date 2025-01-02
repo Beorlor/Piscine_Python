@@ -190,4 +190,5 @@ docstring and flake8
 ex05 how __main__ works
 ex06 what filter does. what is a generator and list comprehension et lambda
 ex07 join et rstrip
+ex08 '\r' and sys.stdout.write doesnt have '\n' compare to print
 
