@@ -185,6 +185,7 @@ This README is designed to explain the Python concepts encountered in each exerc
 
 ---
 
+docstring and flake8
 
 ex05 how __main__ works
 ex06 what filter does. what is a generator and list comprehension et lambda
