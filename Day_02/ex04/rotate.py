@@ -2,9 +2,11 @@ from load_image import ft_load
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def transpose_image(array):
     """
-    Transposes the input image array manually (rows become columns and vice versa).
+    Transposes the input image array manually
+    (rows become columns and vice versa).
     """
     # Validate input array dimensions
     if len(array.shape) < 2:
@@ -20,6 +22,7 @@ def transpose_image(array):
 
     return transposed
 
+
 def main():
     try:
         # Load the image
@@ -27,7 +30,8 @@ def main():
         pixels = ft_load(image_path)
 
         if pixels is not None:
-            # Extract a square part of the image (e.g., top-left 400x400 pixels)
+            # Extract a square part of the image (e.g., top-left 400x400
+            # pixels)
             square_part = pixels[:400, :400, :]
 
             # Print the shape before transpose
@@ -48,6 +52,7 @@ def main():
 
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,7 @@
+from load_image import ft_load
+import matplotlib.pyplot as plt
+
+
 def ft_invert(array):
     """
     Inverts the colors of the image by subtracting each RGB value from 255.
@@ -40,11 +44,13 @@ def ft_grey(array):
     Converts the image to grayscale using the average of the RGB channels.
     """
     grey_image = array.copy()
-    grey_values = (grey_image[:, :, 0] + grey_image[:, :, 1] + grey_image[:, :, 2]) // 3
+    grey_values = (grey_image[:, :, 0] +
+                   grey_image[:, :, 1] + grey_image[:, :, 2]) // 3
     grey_image[:, :, 0] = grey_values  # Set red channel to grey
     grey_image[:, :, 1] = grey_values  # Set green channel to grey
     grey_image[:, :, 2] = grey_values  # Set blue channel to grey
     return grey_image
+
 
 def main():
     try:

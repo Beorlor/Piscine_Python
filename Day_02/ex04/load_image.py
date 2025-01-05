@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+
 def ft_load(path: str) -> np.ndarray:
     """
     Loads an image and returns its pixel data as a NumPy array.
@@ -15,7 +16,8 @@ def ft_load(path: str) -> np.ndarray:
         pixels = np.array(image)
 
         # Print image info
-        print(f"The shape of image is: {pixels.shape}")  # Shape: (height, width, channels)
+        # Shape: (height, width, channels)
+        print(f"The shape of image is: {pixels.shape}")
 
         return pixels
 
