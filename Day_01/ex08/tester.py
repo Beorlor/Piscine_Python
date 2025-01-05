@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    tester.py                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/05 06:01:07 by jedurand          #+#    #+#              #
-#    Updated: 2025/01/05 06:01:07 by jedurand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 from time import sleep
 from tqdm import tqdm
 from Loading import ft_tqdm

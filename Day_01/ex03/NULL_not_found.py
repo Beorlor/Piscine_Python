@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    NULL_not_found.py                                  :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/05 06:00:46 by jedurand          #+#    #+#              #
-#    Updated: 2025/01/05 06:00:46 by jedurand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 def NULL_not_found(obj: any) -> int:
     """
     Prints the object type of "null-like" objects:

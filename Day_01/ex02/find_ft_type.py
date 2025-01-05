@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    find_ft_type.py                                    :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/05 06:00:44 by jedurand          #+#    #+#              #
-#    Updated: 2025/01/05 06:00:44 by jedurand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 def all_thing_is_obj(obj: any) -> int:
     """
     Prints the type of 'obj' with a specific format,
