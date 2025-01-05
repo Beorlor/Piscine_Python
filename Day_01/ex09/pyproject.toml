@@ -8,10 +8,9 @@ version = "0.0.1"
 description = "A sample test package"
 readme = "README.md"
 authors = [
-  {name="eagle", email="eagle@42.fr"}
+  {name="jedurand", email="jedurand@student.42perpignan.fr"}
 ]
-license = "MIT"
-homepage = "https://github.com/eagle/ft_package"
-requires-python = ">=3.6"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
 
 #On peut bien sûr ajouter d’autres champs selon la PEP 621, comme keywords, classifiers, dependencies, etc.

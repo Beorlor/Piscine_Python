@@ -9,4 +9,4 @@ __author__ = "jedurand"
 __license__ = "MIT"
 
 # On importe la fonction du module core pour la rendre disponible au top-level
-from .core import count_in_list
+# from .core import count_in_list
