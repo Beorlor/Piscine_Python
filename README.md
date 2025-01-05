@@ -195,3 +195,4 @@ ex07 join et rstrip
 ex08 '\r' and sys.stdout.write doesnt have '\n' compare to print, iterateur et yield
 ex09 how to create a package (faire ma license et verif toml)
 
+day 02 need to check 3 to 5 (3 sur la gradation de limage)
