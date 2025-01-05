@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 building.py
-Exercice 05: Programme qui compte différents types de caractères dans une chaîne.
+Ex05: Programme qui compte différents types de caractères dans une chaîne.
 """
 
 import sys
@@ -10,7 +10,7 @@ import string
 
 def count_characters(text: str) -> dict:
     """
-    Retourne un dictionnaire contenant le décompte des différents types de caractères:
+    Retourne un dictionnaire contenant le décompte des caractères:
     - total : la longueur totale de la chaîne
     - upper : nombre de lettres majuscules
     - lower : nombre de lettres minuscules

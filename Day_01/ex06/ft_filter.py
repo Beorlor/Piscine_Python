@@ -10,11 +10,11 @@ Recode de la fonction filter, sans utiliser la fonction intégrée filter.
 
 def ft_filter(function_or_none, iterable):
     """
-    ft_filter(function_or_none, iterable) -> filter object (ou liste, selon l'implémentation)
+    ft_filter(function_or_none, iterable) -> filter object
     Comportement similaire à la fonction intégrée filter :
     - Applique function_or_none à chaque élément de iterable.
     - Retourne les éléments pour lesquels la fonction renvoie True.
-    - Si function_or_none est None, on filtre les éléments qui sont "True" intrinsèquement.
+    - Si function_or_none est None, on filtre les éléments qui sont "True".
     """
     if function_or_none is None:
         # equivalent de filter(None, iterable)

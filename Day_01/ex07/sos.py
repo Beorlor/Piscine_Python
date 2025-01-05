@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 sos.py
-Exercice 07: Convertir une chaîne de caractères (alphanum + espace) en code Morse.
+Exercice 07: Convertir une chaîne de caractères en code Morse.
 """
 
 import sys

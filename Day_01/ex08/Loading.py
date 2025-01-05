@@ -15,10 +15,9 @@ def ft_tqdm(iterable):
     - Affiche une barre de progression
     - Rend chaque élément de iterable
     """
-    length = len(
-        iterable)  # Il faut que iterable soit un objet "sized", ex: range
+    length = len(iterable)  # Il faut que iterable soit un objet "sized", ex: range
     # !!!! a utiliser pour avoir une version plus proche de lorginal
-    start_time = time.time()
+    # start_time = time.time()
 
     for i, elem in enumerate(iterable):
         # Calcul pourcentage
