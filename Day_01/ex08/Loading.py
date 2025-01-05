@@ -5,7 +5,7 @@ Exercice 08: Imiter la barre de progression de tqdm avec ft_tqdm.
 """
 
 import sys
-import time
+# import time
 
 
 def ft_tqdm(iterable):
@@ -15,7 +15,7 @@ def ft_tqdm(iterable):
     - Affiche une barre de progression
     - Rend chaque élément de iterable
     """
-    length = len(iterable)  # Il faut que iterable soit un objet "sized", ex: range
+    length = len(iterable)  # Il faut que iterable soit un objet "sized"
     # !!!! a utiliser pour avoir une version plus proche de lorginal
     # start_time = time.time()
 
