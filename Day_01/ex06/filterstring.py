@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    filterstring.py                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:00:55 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:00:55 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/usr/bin/env python3
 """
 filterstring.py
@@ -6,6 +18,7 @@ Exercice 06: Programme qui filtre les mots d'une chaîne selon leur longueur.
 
 import sys
 from ft_filter import ft_filter
+
 
 def main():
     """

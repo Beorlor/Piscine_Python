@@ -1,11 +1,24 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_filter.py                                       :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:00:57 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:00:57 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/usr/bin/env python3
 
-#Verif pour correspondre a filter.__doc__
+# Verif pour correspondre a filter.__doc__
 
 """
 ft_filter.py
 Recode de la fonction filter, sans utiliser la fonction intégrée filter.
 """
+
 
 def ft_filter(function_or_none, iterable):
     """

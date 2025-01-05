@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    building.py                                        :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:00:52 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:00:52 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/usr/bin/env python3
 """
 building.py
@@ -6,6 +18,7 @@ Exercice 05: Programme qui compte différents types de caractères dans une cha�
 
 import sys
 import string
+
 
 def count_characters(text: str) -> dict:
     """
@@ -59,7 +72,8 @@ def main():
         else:
             print("What is the text to count?")
             text_to_count = sys.stdin.readline().rstrip('\n')
-            # si on veut considérer le \n comme un espace, c'est déjà le cas via .isspace()
+            # si on veut considérer le \n comme un espace, c'est déjà le cas
+            # via .isspace()
 
         counts = count_characters(text_to_count)
 

@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    sos.py                                             :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:01:01 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:01:01 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/usr/bin/env python3
 """
 sos.py
@@ -18,6 +30,7 @@ NESTED_MORSE = {
     " ": "/ "
 }
 
+
 def string_to_morse(text: str) -> str:
     """
     Convertit la chaîne text en code Morse grâce au dictionnaire NESTED_MORSE.
@@ -33,8 +46,10 @@ def string_to_morse(text: str) -> str:
         if char not in NESTED_MORSE:
             raise ValueError(f"Character '{char}' is not allowed.")
         morse_output.append(NESTED_MORSE[char])
-    # On joint tout sans espace supplémentaire, car chaque code a déjà un espace à la fin (sauf si on veut le couper)
+    # On joint tout sans espace supplémentaire, car chaque code a déjà un
+    # espace à la fin (sauf si on veut le couper)
     return "".join(morse_output).rstrip()
+
 
 def main():
     """
@@ -64,6 +79,7 @@ def main():
     except ValueError as ve:
         # Ce cas arrive si un caractère illicite se trouve dans la chaîne
         print(f"AssertionError: the arguments are bad ({ve})")
+
 
 if __name__ == "__main__":
     main()

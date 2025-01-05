@@ -1,8 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Hello.py                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:00:39 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:00:39 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 ft_list = ["Hello", "tata!"]
 ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "tutu!"}
 ft_dict = {"Hello": "titi!"}
-         
+
 ft_list[1] = "World!"
 
 ft_tuple = (ft_tuple[0], "France!")

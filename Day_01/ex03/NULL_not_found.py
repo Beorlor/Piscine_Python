@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    NULL_not_found.py                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:00:46 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:00:46 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 def NULL_not_found(obj: any) -> int:
     """
     Prints the object type of "null-like" objects:
@@ -8,14 +20,14 @@ def NULL_not_found(obj: any) -> int:
     if obj is None:
         print(f"Nothing: None {type(obj)}")
         return 0
-    
+
     # 2) float('NaN') -> "Cheese: nan <class 'float'>"
     #    We can check if something is NaN via math.isnan
     import math
     if isinstance(obj, float) and math.isnan(obj):
         print(f"Cheese: nan {type(obj)}")
         return 0
-        
+
     # 5) False -> "Fake: False <class 'bool'>"
     # Need 5 before 3 otherwise Fake fall in 3
     if obj is False:
@@ -35,6 +47,7 @@ def NULL_not_found(obj: any) -> int:
     # If not any of the above
     print("Type not Found")
     return 1
+
 
 Nothing = None
 Garlic = float("NaN")

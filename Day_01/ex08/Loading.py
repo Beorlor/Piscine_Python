@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Loading.py                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jedurand <jedurand@student.42perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/01/05 06:01:05 by jedurand          #+#    #+#              #
+#    Updated: 2025/01/05 06:01:05 by jedurand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/usr/bin/env python3
 """
 Loading.py
@@ -7,6 +19,7 @@ Exercice 08: Imiter la barre de progression de tqdm avec ft_tqdm.
 import sys
 import time
 
+
 def ft_tqdm(iterable):
     """
     ft_tqdm(iterable) -> générateur
@@ -14,8 +27,10 @@ def ft_tqdm(iterable):
     - Affiche une barre de progression
     - Rend chaque élément de iterable
     """
-    length = len(iterable)  # Il faut que iterable soit un objet "sized", ex: range
-    start_time = time.time() # !!!! a utiliser pour avoir une version plus proche de lorginal
+    length = len(
+        iterable)  # Il faut que iterable soit un objet "sized", ex: range
+    # !!!! a utiliser pour avoir une version plus proche de lorginal
+    start_time = time.time()
 
     for i, elem in enumerate(iterable):
         # Calcul pourcentage
@@ -30,7 +45,7 @@ def ft_tqdm(iterable):
         )
         sys.stdout.flush()
 
-        yield elem # super important, permet davancer literateur
+        yield elem  # super important, permet davancer literateur
 
     # A la fin, on force la barre à 100%
     sys.stdout.write(
