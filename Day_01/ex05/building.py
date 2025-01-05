@@ -59,9 +59,7 @@ def main():
             text_to_count = args[0]
         else:
             print("What is the text to count?")
-            text_to_count = sys.stdin.readline().rstrip('\n')
-            # si on veut considérer le \n comme un espace, c'est déjà le cas
-            # via .isspace()
+            text_to_count = sys.stdin.readline()
 
         counts = count_characters(text_to_count)
 
