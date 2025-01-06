@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def ft_invert(array):
     """
-    Inverts the colors of the image by subtracting each RGB value from 255.
+    Inverts the colors of the image received.
     """
     return 255 - array
 
@@ -74,6 +74,7 @@ def main():
                 plt.title(name)
                 plt.axis("off")
                 plt.show()
+        print(ft_invert.__doc__)
 
     except Exception as e:
         print(f"An error occurred: {e}")
