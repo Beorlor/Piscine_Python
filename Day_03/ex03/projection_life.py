@@ -3,14 +3,16 @@ import pandas as pd
 from load_csv import load
 
 
-def prepare_data(income_path: str, life_expectancy_path: str, year: int) -> pd.DataFrame:
+def prepare_data(income_path: str, life_expectancy_path: str,
+                 year: int) -> pd.DataFrame:
     """
     Load and merge the income and life expectancy data for a given year.
 
     :param income_path: Path to the income dataset CSV.
     :param life_expectancy_path: Path to the life expectancy dataset CSV.
     :param year: The year for which to filter the data.
-    :return: A merged DataFrame with income and life expectancy data for the specified year.
+    :return: A merged DataFrame with income and life expectancy data
+     for the specified year.
     """
     # Load the datasets
     income_data = load(income_path)
@@ -22,7 +24,8 @@ def prepare_data(income_path: str, life_expectancy_path: str, year: int) -> pd.D
 
     # Ensure the year exists in both datasets
     year_str = str(year)
-    if year_str not in income_data.columns or year_str not in life_expectancy_data.columns:
+    if (year_str not in income_data.columns or
+            year_str not in life_expectancy_data.columns):
         print(f"Error: Year {year} not found in one or both datasets.")
         return None
 
@@ -30,7 +33,8 @@ def prepare_data(income_path: str, life_expectancy_path: str, year: int) -> pd.D
     income_data = income_data[['country', year_str]]
     life_expectancy_data = life_expectancy_data[['country', year_str]]
     merged_data = pd.merge(
-        income_data, life_expectancy_data, on="country", suffixes=('_income', '_life')
+        income_data, life_expectancy_data,
+        on="country", suffixes=('_income', '_life')
     )
 
     # Rename columns for clarity
@@ -40,8 +44,10 @@ def prepare_data(income_path: str, life_expectancy_path: str, year: int) -> pd.D
     merged_data.dropna(inplace=True)
 
     # Convert columns to numeric
-    merged_data['income'] = pd.to_numeric(merged_data['income'], errors='coerce')
-    merged_data['life_expectancy'] = pd.to_numeric(merged_data['life_expectancy'], errors='coerce')
+    merged_data['income'] = pd.to_numeric(merged_data['income'],
+                                          errors='coerce')
+    merged_data['life_expectancy'] = pd.to_numeric(
+        merged_data['life_expectancy'], errors='coerce')
 
     return merged_data.dropna()
 
@@ -50,7 +56,8 @@ def plot_projection(data: pd.DataFrame, year: int) -> None:
     """
     Plot the projection of life expectancy versus GDP for a given year.
 
-    :param data: The merged DataFrame containing income and life expectancy data.
+    :param data: The merged DataFrame containing income
+     and life expectancy data.
     :param year: The year for which the projection is being plotted.
     """
     if data is None or data.empty:
