@@ -14,7 +14,7 @@ def rotate_90_counter_clockwise(image: np.ndarray) -> np.ndarray:
     # Initialize an empty array for the rotated image
     rotated = np.zeros((width, height), dtype=image.dtype)
 
-    # Transpose and reverse rows to achieve 90-degree counter-clockwise rotation
+    # Transpose and reverse row to achieve 90-degree counter-clockwise rotation
     for y in range(height):
         for x in range(width):
             rotated[width - x - 1, y] = image[y, x]
@@ -22,10 +22,11 @@ def rotate_90_counter_clockwise(image: np.ndarray) -> np.ndarray:
     return rotated
 
 
-#Need to be able to zoom anywhere in the image, not just the center
+# Need to be able to zoom anywhere in the image, not just the center
 def zoom_image(pixels: np.ndarray, zoom_width: int, zoom_height: int):
     """
-    Zooms into the center of the image, converts it to grayscale, rotates it, and displays it.
+    Zooms into the center of the image, converts it to grayscale,
+    rotates it, and displays it.
     """
     try:
         # Calculate the center of the image
@@ -67,7 +68,6 @@ def main():
 
     if pixels is not None:
         zoom_image(pixels, zoom_width=400, zoom_height=400)
-
 
 
 if __name__ == "__main__":

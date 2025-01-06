@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 from load_image import ft_load
 import numpy as np
 
-#Need to be able to zoom anywhere in the image, not just the center
+
+# Need to be able to zoom anywhere in the image, not just the center
 def zoom_image(pixels: np.ndarray, zoom_width: int, zoom_height: int):
     """
-    Zooms into the center of the image, converts it to grayscale, and displays it.
+    Zooms into the center of the image, converts it to grayscale,
+    and displays it.
     """
     try:
         # Calculate the center of the image
@@ -46,7 +48,6 @@ def main():
 
     if pixels is not None:
         zoom_image(pixels, zoom_width=400, zoom_height=400)
-
 
 
 if __name__ == "__main__":
