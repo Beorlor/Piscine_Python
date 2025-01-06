@@ -36,6 +36,7 @@ def ft_load(path: str) -> np.ndarray:
 
         # Afficher les dimensions
         print(f"The shape of image is: {pixels.shape}")
+        print(pixels)
 
         return pixels
 
@@ -49,8 +50,7 @@ def main():
     # Test avec une image JPG ou JPEG
     try:
         image_path = "landscape.jpg"
-        pixels = ft_load(image_path)
-        print(pixels)
+        ft_load(image_path)
     except Exception as e:
         print(f"Error: {e}")
 
