@@ -1,10 +1,11 @@
 import pandas as pd
 
+
 def load(path: str) -> pd.DataFrame or None:
     """
     Load a dataset from the given path, print its dimensions,
     and return the dataset as a pandas DataFrame.
-    
+
     :param path: Path to the CSV file
     :return: DataFrame if successful, None otherwise
     """
@@ -23,8 +24,10 @@ def load(path: str) -> pd.DataFrame or None:
         print(f"An unexpected error occurred: {e}")
         return None
 
+
 def main():
     print(load("life_expectancy_years.csv"))
+
 
 if __name__ == "__main__":
     main()

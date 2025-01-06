@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from load_csv import load
 
+
 def plot_life_expectancy(dataset: pd.DataFrame, country: str) -> None:
     """
     Plot life expectancy data for a specific country.
@@ -17,7 +18,7 @@ def plot_life_expectancy(dataset: pd.DataFrame, country: str) -> None:
 
         # Extract data for the given country
         country_data = dataset[dataset['country'] == country].iloc[0]
-        years = dataset.columns[1:].astype(int)  # Convert year columns to integers
+        years = dataset.columns[1:].astype(int)  # Year columns to integers
         life_expectancy = country_data.iloc[1:].values
 
         # Plot the data
@@ -27,7 +28,7 @@ def plot_life_expectancy(dataset: pd.DataFrame, country: str) -> None:
         plt.xlabel("Year")
         plt.ylabel("Life Expectancy")
         plt.legend()
-        plt.grid(True)
+        plt.grid(False)
         plt.show()
     except KeyError as e:
         print(f"Key error: {e}")
@@ -53,6 +54,7 @@ def main():
 
     # Plot the life expectancy data for the given country
     plot_life_expectancy(dataset, country)
+
 
 if __name__ == "__main__":
     main()
