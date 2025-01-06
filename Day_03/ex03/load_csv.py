@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def load(path: str) -> pd.DataFrame or None:
+def load(path: str) -> pd.DataFrame:
     """
     Load a dataset from the given path, print its dimensions,
     and return the dataset as a pandas DataFrame.
