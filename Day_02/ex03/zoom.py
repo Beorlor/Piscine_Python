@@ -21,6 +21,8 @@ def zoom_image(pixels: np.ndarray, zoom_width: int, zoom_height: int):
         # Slice the image to zoom in
         zoomed = pixels[y_start:y_end, x_start:x_end]
 
+        # Rotate the image 90 degrees counter-clockwise
+
         # Convert to grayscale
         grayscale = zoomed.mean(axis=2).astype(np.uint8)
 
