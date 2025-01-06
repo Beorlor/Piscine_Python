@@ -4,27 +4,29 @@ from load_csv import load
 from matplotlib.ticker import FixedLocator, FuncFormatter
 
 
-
 def clean_population_data(dataset: pd.DataFrame) -> pd.DataFrame:
     """
-    Clean the population data by removing letter suffixes (M, k, B) and converting to numeric.
+    Clean the population data by removing letter suffixes (M, k, B)
+    and converting to numeric.
 
     :param dataset: The dataset as a pandas DataFrame.
     :return: Cleaned dataset with numeric population values.
     """
     for column in dataset.columns[1:]:
         dataset[column] = dataset[column].apply(
-            lambda x: 
-            float(x.replace('M', '')) * 1e6 if 'M' in str(x) else
-            float(x.replace('k', '')) * 1e3 if 'k' in str(x) else
-            float(x.replace('B', '')) * 1e9 if 'B' in str(x) else
-            float(x) if str(x).replace('.', '', 1).isdigit() else
-            None
+            lambda x: (
+                float(x.replace('M', '')) * 1e6 if 'M' in str(x) else
+                float(x.replace('k', '')) * 1e3 if 'k' in str(x) else
+                float(x.replace('B', '')) * 1e9 if 'B' in str(x) else
+                float(x) if str(x).replace('.', '', 1).isdigit() else
+                None
+            )
         )
     return dataset
 
 
-def plot_population_comparison(dataset: pd.DataFrame, country1: str, country2: str) -> None:
+def plot_population_comparison(dataset: pd.DataFrame, country1: str,
+                               country2: str) -> None:
     """
     Plot population data for two specific countries.
 
@@ -34,8 +36,9 @@ def plot_population_comparison(dataset: pd.DataFrame, country1: str, country2: s
     """
     try:
         # Ensure both countries exist in the dataset
-        if country1 not in dataset['country'].values or country2 not in dataset['country'].values:
-            print(f"Error: One or both countries are not in the dataset.")
+        if (country1 not in dataset['country'].values or
+                country2 not in dataset['country'].values):
+            print("Error: One or both countries are not in the dataset.")
             return
 
         # Extract data for each country
@@ -43,7 +46,7 @@ def plot_population_comparison(dataset: pd.DataFrame, country1: str, country2: s
         country2_data = dataset[dataset['country'] == country2].iloc[0]
 
         # Extract years and population data
-        years = dataset.columns[1:].astype(int)  # Convert year columns to integers
+        years = dataset.columns[1:].astype(int)  # Year columns to integers
         population1 = country1_data.iloc[1:].values
         population2 = country2_data.iloc[1:].values
 
@@ -55,10 +58,11 @@ def plot_population_comparison(dataset: pd.DataFrame, country1: str, country2: s
         plt.xlabel("Year")
         plt.ylabel("Population")
 
-       # Format the y-axis to show population in millions
+        # Format the y-axis to show population in millions
         plt.gca().yaxis.set_major_locator(FixedLocator([20e6, 40e6, 60e6]))
-        plt.gca().yaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{int(x / 1e6)}M"))
-
+        plt.gca().yaxis.set_major_formatter(
+            FuncFormatter(lambda x, _: f"{int(x / 1e6)}M")
+        )
 
         plt.legend(loc="lower right")
         plt.grid(False)
@@ -87,7 +91,7 @@ def main():
 
     # Specify the countries for comparison
     country1 = "France"
-    country2 = "Belgium" # "Gabon"
+    country2 = "Belgium"  # "Gabon"
 
     # Plot the population data for the two countries
     plot_population_comparison(dataset, country1, country2)
