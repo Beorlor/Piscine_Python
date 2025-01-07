@@ -200,3 +200,7 @@ day 02 img and numpy and plt
 day 03 csv and panda and plt
 
 day 04 object (init vs cls)
+
+
+
+Pour rendre verifier que tout les exos sont bien des programmes avec main
