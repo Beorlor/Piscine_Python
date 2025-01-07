@@ -195,4 +195,8 @@ ex07 join et rstrip
 ex08 '\r' and sys.stdout.write doesnt have '\n' compare to print, iterateur et yield
 ex09 how to create a package (faire ma license et verif toml)
 
-day 02 need to check 3 to 5 (3 sur la gradation de limage)
+day 02 img and numpy and plt
+
+day 03 csv and panda and plt
+
+day 04 object (init vs cls)
