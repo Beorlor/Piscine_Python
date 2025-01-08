@@ -28,19 +28,15 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
 
     def quartiles(data: List[float]) -> List[float]:
         """Calculate the first and third quartiles (Q1, Q3) of a list of numbers."""
-        if n % 2 == 0:
-            lower_half = data[:n // 2]
-            upper_half = data[n // 2:]
-        else:
-            lower_half = data[:n // 2]
-            upper_half = data[n // 2 + 1:]
+        lower_half = data[:n // 2]
+        upper_half = data[n // 2:]
 
         def calc_median(subset: List[float]) -> float:
             m = len(subset)
-            if m % 2 == 0:
-                return (subset[m // 2 - 1] + subset[m // 2]) / 2
-            else:
-                return subset[m // 2]
+            # if m % 2 == 0:
+            #     return (subset[m // 2 - 1] + subset[m // 2]) / 2
+            # else:
+            return subset[m // 2]
 
         q1 = calc_median(lower_half)
         q3 = calc_median(upper_half)
