@@ -6,11 +6,6 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
     Calculate statistics (mean, median, quartiles, standard deviation, variance)
     based on the arguments and keyword arguments provided.
     """
-    # Vérification des erreurs de base
-    if not args or not all(isinstance(arg, (int, float)) for arg in args):
-        print("ERROR")
-        return
-
     # Tri des arguments numériques
     data = sorted(args)
     n = len(data)
@@ -29,14 +24,14 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
     def quartiles(data: List[float]) -> List[float]:
         """Calculate the first and third quartiles (Q1, Q3) of a list of numbers."""
         lower_half = data[:n // 2]
-        upper_half = data[n // 2:]
+        upper_half = data[n //  2:]
 
         def calc_median(subset: List[float]) -> float:
             m = len(subset)
             # if m % 2 == 0:
             #     return (subset[m // 2 - 1] + subset[m // 2]) / 2
             # else:
-            return subset[m // 2]
+            return subset[m //  2]
 
         q1 = calc_median(lower_half)
         q3 = calc_median(upper_half)
@@ -66,5 +61,3 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
                 print(f"{value} : {result}")
             except Exception:
                 print("ERROR")
-        else:
-            print("ERROR")
