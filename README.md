@@ -201,6 +201,8 @@ day 03 csv and panda and plt
 
 day 04 object (init vs cls)
 
+day 05 inner function, decorateurs, closures, 
+
 
 
 Pour rendre verifier que tout les exos sont bien des programmes avec main
