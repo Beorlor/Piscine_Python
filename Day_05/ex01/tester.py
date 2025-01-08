@@ -1,5 +1,6 @@
 from in_out import outer, square, pow
 
+
 my_counter = outer(3, square)
 print(my_counter())  # 9 (3^2)
 print(my_counter())  # 81 (9^2)
