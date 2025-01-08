@@ -205,7 +205,7 @@ day 05 inner function, decorateurs, closures,
 
 
 
-Pour rendre verifier que tout les exos sont bien des programmes avec main
+Pour rendre verifier que tout les exos sont bien des programmes avec main (day 3 a 5 surtout)
 
 day4 ex04 et day5 ex00 formatage output float not good
 
