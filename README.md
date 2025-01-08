@@ -204,3 +204,8 @@ day 04 object (init vs cls)
 
 
 Pour rendre verifier que tout les exos sont bien des programmes avec main
+
+day4 ex04 et day5 ex00 formatage output float not good
+
+                    formatted_result = [round(x, 1) for x in result]
+                    print(f"{value} : {formatted_result}")
